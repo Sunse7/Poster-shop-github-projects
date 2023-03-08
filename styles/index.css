@@ -109,6 +109,7 @@ main {
   color: #FFFFFF;
 }
 
+
 .card:nth-child(10), .card:last-child {
   max-width: 29rem;
   color: #222222;
@@ -128,7 +129,6 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
-  align-self: flex-start;
 }
 
 
