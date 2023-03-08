@@ -1,6 +1,6 @@
-import { renderSmallCards, renderLargeCards } from "./ui.js";
+import { renderCards } from "./ui.js";
 
-const dbFile = "../files/posters.json";
+const dbFile = "files/posters.json";
 
 
 getJsonData();
@@ -8,5 +8,5 @@ getJsonData();
 function getJsonData() {
     fetch(dbFile)
     .then(data => data.json())
-    .then(data => renderSmallCards(data));
+    .then(data => renderCards(data));
 }

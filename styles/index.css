@@ -105,20 +105,17 @@ main {
   font-size: 1rem;
   line-height: 140%;
   width: 100%;
-}
-
-.card--small {
   max-width: 18rem;
   color: #FFFFFF;
 }
 
-.card--large {
+.card:nth-child(10), .card:last-child {
   max-width: 29rem;
   color: #222222;
   background-color: #FFFFFF;
 }
 
-.card--large div {
+.card:nth-child(10) div, .card:last-child div {
   padding: 1rem
 }
 
