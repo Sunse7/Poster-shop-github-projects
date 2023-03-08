@@ -2,6 +2,7 @@ import { openMenu } from "./menu.js";
 
 //VARIABLES
 let productsInCart = JSON.parse(localStorage.getItem("productsInCart"))
+let total = 0
 //Container for cards
 let containerEl = document.querySelector(".cards-container")
 //Container for list of items
@@ -64,6 +65,18 @@ function renderCart() {
     `
     cartSumEl.appendChild(cartEl)
   })
+  let totalEl = document.createElement("h5")
+  totalEl.innerHTML = `${calcCost(productsInCart)}`
+  cartSumEl.appendChild(totalEl)
+}
+
+
+//Calculate sum of items
+function calcCost(productsInCart) {
+  productsInCart.forEach(product => {
+    total += parseInt(product.price)
+  })
+  return total
 }
 
 

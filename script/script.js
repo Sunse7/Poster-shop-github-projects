@@ -23,4 +23,7 @@ function addToCart(btnId, product) {
     localStorage.setItem("productsInCart", JSON.stringify(productsInCart))
 }
 
+
+
+
 export {addToCart}
