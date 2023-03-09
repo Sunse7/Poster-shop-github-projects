@@ -6,7 +6,7 @@ let total = 0
 //Container for cards
 let containerEl = document.querySelector(".cards-container")
 //Container for list of items
-let cartSumEl = document.querySelector(".info-container")
+let cartSumEl = document.querySelector(".sum-container")
 
 openMenu()
 renderCards(productsInCart)
