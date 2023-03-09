@@ -192,17 +192,8 @@ font-size: 2rem;
   justify-content: space-between;
 }
 
-.info__wrapper p {
-  justify-content: space-between;
-}
-
 hr {
   width: 1000px;
-  height: 2px;
-}
-.info__divider {
-  background: #D9D9D9;
-  max-width: 1000px;
   height: 2px;
 }
 
