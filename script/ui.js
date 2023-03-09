@@ -1,4 +1,4 @@
-
+import { addToCart } from "./script.js"
 
 function renderCards(list) {
   let containerEl = document.querySelector(".cards-container")
@@ -10,12 +10,24 @@ function renderCards(list) {
     <div>
       <h2>${product.name}</h2>
       <p>${product.desc}</p>
-      <button class="btn">Oh, take my money!</button>
     </div>
     `
+    cardEl.appendChild(addBtn(product)) 
     containerEl.appendChild(cardEl)
   });
-  
+}
+
+function addBtn(product) {
+  let btn = document.createElement("button")
+  btn.setAttribute("class", "btn")
+  btn.setAttribute("id", product.id)
+  btn.innerHTML = "Oh, take my money!"
+  btn.addEventListener("click", (e) => {
+    console.log("click")
+    let btnId = e.target.id
+    addToCart(btnId, product)
+})
+  return btn
 }
 
 export  {renderCards}

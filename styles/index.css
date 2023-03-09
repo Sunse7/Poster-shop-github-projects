@@ -109,6 +109,7 @@ main {
   color: #FFFFFF;
 }
 
+
 .card:nth-child(10), .card:last-child {
   max-width: 29rem;
   color: #222222;
