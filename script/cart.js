@@ -54,6 +54,7 @@ function removeFromCart(btnId, productsInCart) {
 
 //Render list of items in cart in UI 
 function renderCart() {
+  total = 0
   cartSumEl.innerHTML = " "
   productsInCart.forEach(product => {
     let cartEl = document.createElement("section")
