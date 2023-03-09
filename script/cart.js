@@ -7,6 +7,7 @@ let total = 0
 let containerEl = document.querySelector(".cards-container")
 //Container for list of items
 let cartSumEl = document.querySelector(".sum-container")
+let totalDivEl = document.querySelector(".total")
 
 openMenu()
 renderCards(productsInCart)
@@ -16,7 +17,7 @@ renderCards(productsInCart)
 function renderCards(list) {
   list.forEach(product => {
     let cardEl = document.createElement("section")
-    cardEl.setAttribute("class", "card")
+    cardEl.setAttribute("class", "small-class")
     cardEl.innerHTML = `
     <img src="../images/${product.img}">
     <div>
@@ -32,7 +33,6 @@ function renderCards(list) {
 //Add remove button
 function addBtn(product) {
   let btn = document.createElement("button")
-  btn.setAttribute("class", "btn")
   btn.setAttribute("id", product.id)
   btn.innerHTML = "Ta bort från varukorg"
   btn.addEventListener("click", (e) => {
@@ -56,6 +56,7 @@ function removeFromCart(btnId, productsInCart) {
 function renderCart() {
   total = 0
   cartSumEl.innerHTML = " "
+  totalDivEl.innerHTML = `<h2>Total</h2>`
   productsInCart.forEach(product => {
     let cartEl = document.createElement("section")
     cartEl.setAttribute("class", "cart-text")
@@ -66,9 +67,9 @@ function renderCart() {
     `
     cartSumEl.appendChild(cartEl)
   })
-  let totalEl = document.createElement("h5")
+  let totalEl = document.createElement("h2")
   totalEl.innerHTML = `${calcCost(productsInCart)}`
-  cartSumEl.appendChild(totalEl)
+  totalDivEl.appendChild(totalEl)
 }
 
 
