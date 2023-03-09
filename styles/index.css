@@ -167,7 +167,7 @@ footer a:hover {
   flex-direction: column;
   color: #FFFFFF;
   max-width: 1000px;
-  margin: auto;
+  margin: 5rem auto;
 }
 
 .main__title {
@@ -176,7 +176,7 @@ footer a:hover {
 
 .info-container {
   display: flex;
-  
+  flex-direction: column;
 }
 
 .info-container p {
@@ -189,7 +189,7 @@ font-size: 2rem;
 
 .info__wrapper {
   display: flex;
-  
+  justify-content: space-between;
 }
 
 .info__wrapper p {
